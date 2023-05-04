@@ -1,8 +1,22 @@
 import Link from 'next/link';
+import Head from 'next/head';
+// import Script from 'next/script';
 
 export default function FirstPost() {
     return (
         <>
+            <Head>
+                <title>First Post</title>
+            </Head>
+            {/* <Script
+                src="https://connect.facebook.net/en_US/sdk.js"
+                strategy="lazyOnload"
+                onLoad={() =>
+                console.log(`script loaded correctly, window.FB has been populated`)
+                }
+            />  */}
+            {/* Next.js 's Script component inherently optimizes when the script is fetched & executed, preventing render-blocking code */}
+            {/* Strategy denotes when Next.js should load the resource, onLoad tells it to run any JS code immediately after loading */}
             <h1>First Post</h1>
             <h2><Link href="/">Back to Home</Link></h2>
             
